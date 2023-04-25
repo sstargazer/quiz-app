@@ -1,0 +1,64 @@
+:host {
+  text-align: center;
+}
+
+.name {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .score {
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+
+  .number-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+  }
+
+  .digit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 10px;
+    background-color: #fff;
+    animation: bounce 3s ease-in-out;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

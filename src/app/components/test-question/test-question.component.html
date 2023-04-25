@@ -1,0 +1,18 @@
+<app-loading *ngIf="isLoading && !quizIsOver" />
+<div *ngIf="!isLoading && !quizIsOver" class="test">
+  <h1 class="test-question">
+    {{test.question}}
+  </h1>
+
+  <ul class="test-answers">
+    <li (click)="submitAnswer(answer)"
+      [ngClass]="displayingRightAnswer ? (answer === test.correctAnswer ? 'correct-submitted' : (selectedOption === answer ? 'incorrect-submitted' : '')) : ''"
+      *ngFor="let answer of answers" class="answer">
+      {{answer}}
+    </li>
+  </ul>
+  <p>Your Score: {{score}}</p>
+</div>
+
+
+<app-results-page [score]="score" *ngIf="quizIsOver"></app-results-page>

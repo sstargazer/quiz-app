@@ -1,0 +1,20 @@
+<form [formGroup]="loginForm" autocomplete="off" (submit)="onSubmit()" class="login-form">
+  <div class="login-form--top-border">
+    <p>QUIZZZUP</p>
+  </div>
+  <div class="welcome">
+    <h5>Welcome!</h5>
+    <h6>Choose Your Category And Enjoy Quiz!</h6>
+  </div>
+  <div class="category">
+    <select name="category" formControlName="category" title="category"
+      [ngClass]="{'category-not-selected' : submitWasClicked && category.errors}">
+      <option value="" disabled selected class="select-placeholder">Select a Category</option>
+      <option *ngFor="let category of categories" [value]="categoryObj[category]">{{category}}</option>
+    </select>
+    <div *ngIf="submitWasClicked && category.errors" class="input-error">
+      <p>*Choose Any!</p>
+    </div>
+  </div>
+  <button class="login-form-btn" type="submit">Start</button>
+</form>

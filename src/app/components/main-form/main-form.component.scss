@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap");
+
+.login-form {
+  position: relative;
+  width: 30%;
+  margin: 10% auto;
+  border-radius: 20px;
+  padding: 60px 30px 40px 30px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  & > * {
+    margin-bottom: 30px;
+  }
+
+  &--top-border {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background: linear-gradient(90deg, rgb(194, 0, 92) 0%, rgb(138, 14, 110) 100%);
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transform: scale(1.009);
+
+    p {
+      position: absolute;
+      right: 30px;
+      color: white;
+      font-weight: bold;
+    }
+
+    &::before {
+      content: "";
+      width: 50%;
+      height: 0.5px;
+      background-color: white;
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+    }
+  }
+
+  label {
+    display: block;
+  }
+
+  input,
+  select {
+    border-radius: 5px;
+    height: 30px;
+    border: none;
+    background-color: #ccc;
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+    outline: none;
+    font-family: inherit;
+  }
+
+  .input-error {
+    margin: 0;
+    font-size: 14px;
+    color: #ff5733;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 8px;
+  }
+
+  .category-not-selected {
+    border: 1px solid #ff5733;
+  }
+
+  .welcome {
+    text-align: center;
+    h5,
+    h6 {
+      font-size: 20px;
+    }
+    h5 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    h6 {
+      margin-top: 0;
+    }
+  }
+
+  &-btn {
+    font-family: inherit;
+    width: 100%;
+    font-size: 25px;
+    color: white;
+    background: orange;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}

@@ -17,7 +17,7 @@ export class HttpService {
   public getQuestions(selected: string) {
     return this.http
       .get(
-        `https://the-trivia-api.com/api/questions?limit=5&categories=${selected}`
+        `https://the-trivia-api.com/api/questions?limit=10&categories=${selected}`
       )
       .subscribe((res: any) => {
         this.selectedQuestions.next(res);
